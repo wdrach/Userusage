@@ -99,6 +99,12 @@ without much trouble.
 
 	help meeeeeee
 
+## Python module
+
+Userusage **can** be used as a Python module, in which it will
+only read from the config file, but that is iffy. I don't recommend
+trying it.
+
 ## Extra comments
 
 Userusage is licensed by Beerware r42

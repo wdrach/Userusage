@@ -827,11 +827,6 @@ your size arguments. Check your syntax or use -h for help
     def read_config(self, config_location):
         '''Read our config file'''
 
-        # warn if they are using the sample config
-        if config_location == '../config/userusage.ini':
-            stderr.write('\nWARNING: You are using a ' +
-                         'sample configuration file!\n')
-
         hostname = socket.gethostname()
 
 
@@ -933,9 +928,13 @@ def main():
         except:
             exit(1)
 
+    # read the config twice in case a specified one is there
     new_conf_locale = config.find_config()
-    if new_conf_locale != conf_locale and new_conf_locale != '':
-        config.read_config(new_conf_locale)
+    if config.inconf != '':
+        new_config = conf()
+        new_config.read_config(new_conf_locale)
+        new_config.parse_arguments()
+        config = new_config
 
     config.fix_partition()
 
@@ -965,8 +964,7 @@ def main():
                     %(config.partition,config.space_threshold))
             exit(0)
 
-    except Exception as err:
-        print(err)
+    except:
         exit(1)
 
 ##############################################################################
