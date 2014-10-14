@@ -6,12 +6,6 @@
 #    \_\_/ _)_) |_|__ |_| \ \_\_/ _)_) /_/--\ \_\_/ |_|__    #
 #               Userusage Python by Will Drach               #
 ##############################################################
-# Userusage is licensed under the Beer-ware license(R42):    #
-# widr1225@colorado.edu wrote this script. As long as you    #
-# retain this notice you can do whatever you want with this  #
-# stuff. If we meet some day, and you think this stuff is    #
-# worth it, you can buy me a beer in return --Will Drach     #
-##############################################################
 # Userusage comes with no guarantee, warranty, or suggestion #
 # that it even remotely does what it's supposed to.          #
 ##############################################################
