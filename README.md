@@ -1,6 +1,6 @@
 # Userusage documentation
          
-# description
+## Description
 
 UserUsage will scan a disk or a partition for any given
 user's space usage on that disk and email or list those
@@ -8,12 +8,12 @@ users. It is build in Python with some core Unix utilities
 for speed. It makes use of the speed of "find -exec" while
 utilizing Python for combining that data.
 
-# Warning
+## Warning
 
 Userusage comes with no guarantee, warranty,or suggestion 
 that it even remotely does what it's supposed to.
 
-# Commands
+## Commands
 
 * -h/--help: Display the help message and exit
 * -u/--usage: Display the usage message and exit
@@ -39,17 +39,19 @@ that it even remotely does what it's supposed to.
 
 * --version: Get UserUsage version
 
-# Exit codes
+## Exit codes
 
 There are 4 exit codes in UserUsage.
-	0 is a successful exit, or in some cases an ArgParse error
-	1 is an expected error, which usually is given context
-	2 is an unexpected error, I.E. a code error, not a user error
-	3 is if somehow we get out of main()
 
-# Examples
+* 0 is a successful exit, or in some cases an ArgParse error
+* 1 is an expected error, which usually is given context
+* 2 is an unexpected error, I.E. a code error, not a user error
+* 3 is if somehow we get out of main()
+
+## Examples
 
 UserUsage is built to be run as a weekly or manually kind of deal
+
 Due to this, there are some sets of commands that everyone should
 keep in mind. Also note that these will run with default configs
 without much trouble.
@@ -80,7 +82,7 @@ lines of
 
 and it will go perfectally fine.
 
-# Extra comments
+## Extra comments
 
 Userusage is licensed by Beerware r42
 The code is open and fairly well commented, so it should be followed
