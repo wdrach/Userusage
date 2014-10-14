@@ -11,7 +11,29 @@ utilizing Python for combining that data.
 ## Warning
 
 Userusage comes with no guarantee, warranty,or suggestion 
-that it even remotely does what it's supposed to.
+that it even remotely does what it's supposed to. It will
+likely not do its intended purpose if it is not used wisely
+YMMV
+
+## Configuration
+
+The configuration file is under config/userusage.ini. It is
+an INI file that is heavily commented with instructions on how
+to change settings. There are very few settings in configuration
+that are different from their respective command line arguments,
+so it should not be difficult to figure it out.
+
+The configuration can be read from a variety of places
+
+* $HOME/userusage.ini
+* $HOME/.userusage.ini
+* $HOME/.config/userusage.ini
+* /usr/local/etc/userusage/userusage.ini
+* /etc/userusage/userusage.ini
+
+Feel free to move it to wherever is best for your setup. Note
+that many du commands require root and that $HOME might go
+through as ~root instead of ~
 
 ## Commands
 
@@ -21,7 +43,7 @@ that it even remotely does what it's supposed to.
 * -r/--recursive: Run UserUsage in recursive mode
 * --home-dir: Scan every user's home directory
 * -p/--partition: Specify the partition to check
-* -t/--threshold: Set threshold for specified partition to run UserUsage
+* -t/--threshold: Set threshold for specified partition to run Userusage
 * -d/--directory: Set directory to run UserUsage in
 
 * --list-size: List users who are over a specified size
@@ -70,6 +92,7 @@ without much trouble.
 	this if the root partition is over 95%
 
 3. `userusage 1>&2 /var/log/userusage.log`
+
 	Properly configured cronjob
 
 4. `userusage -h`
