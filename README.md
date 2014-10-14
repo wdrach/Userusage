@@ -56,31 +56,25 @@ Due to this, there are some sets of commands that everyone should
 keep in mind. Also note that these will run with default configs
 without much trouble.
 
-1. userusage -db
+1. `userusage -db`
+
 	The simplest of commands. List all and mail none + very
 	verbose. Fairly straightforward and useful if you just
 	want to check your users usage.
 
-2. userusage -vv --list-top -1 -r -p / -d / 1>&2 /var/log/userusage.log
+2. `userusage -vv --list-top -1 -r -p / -d / 1>&2 /var/log/userusage.log`
+
 	typical weekly cronjob of userusage. Mail top 10 users, list all,
 	mail top 10, pipe errors and output from very verbose into a log
 	file and check the whole drive for users recursively. It only does
 	this if the root partition is over 95%
 
-3. userusage -vv 1>&2 /var/log/userusage.log
-	The quick version of the cronjob deal. Mail 10 list 0 nonrecursive
-	check of the home directory. Only runs if /home partition is above
-	95%
+3. `userusage 1>&2 /var/log/userusage.log`
+	Properly configured cronjob
 
-4. userusage -h
+4. `userusage -h`
+
 	help meeeeeee
-
-If you have a solid config in /etc you can just do something along the
-lines of
-
-1. userusage 1>&2 /var/log/userusage.log
-
-and it will go perfectally fine.
 
 ## Extra comments
 
